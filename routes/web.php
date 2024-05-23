@@ -8,3 +8,4 @@ Route::get('/', function () {
 });
  
 Route::get('products', [ProductController::class, 'index']);
+// ^^^^here we are calling the index function in our product controller
