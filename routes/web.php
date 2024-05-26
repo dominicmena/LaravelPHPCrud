@@ -7,5 +7,7 @@ Route::get('/', function () {
     return view('welcome');
 });
  
-Route::get('products', [ProductController::class, 'index']);
+// Route::get('products', [ProductController::class, 'index']);
 // ^^^^here we are calling the index function in our product controller
+
+Route::resource('products', ProductController::class);
