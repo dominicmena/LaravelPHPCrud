@@ -29,10 +29,10 @@
                 </select>
                 <hr>
                 <label>Inventory</label>
-                <input type="text" class="input" >
+                <input type="text" name="quantity" >
                 <hr>
                 <label>Price</label>
-                <input type="text" class="input" >
+                <input type="text" name="price" >
            </div>
         </div>
         <div class="titlebar">
