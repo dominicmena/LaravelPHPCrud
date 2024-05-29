@@ -22,8 +22,10 @@
             </div>
            <div>
                 <label>Category</label>
-                <select  name="" id="" >
+                <select  name="category" id="" >
+                    @foreach (json_decode('{"Smartphone":"Smartphone", "Smart TV": "Smart TV", "Computer":"Computer"}', true) as $optionKey => $optionValue)
                     <option value="" >Email Subscription</option>
+                    @endforeach
                 </select>
                 <hr>
                 <label>Inventory</label>
