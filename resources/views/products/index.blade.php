@@ -35,6 +35,7 @@ Toast.fire({
                 </ul>
             </div>
         </div>
+        <form method="GET" action="{{ route('products.index')}}" accept-charset="UTF-8" role="search">
         <div class="table-search">   
             <div>
                 <button class="search-select">
@@ -45,9 +46,10 @@ Toast.fire({
                 </span>
             </div>
             <div class="relative">
-                <input class="search-input" type="text" name="search" placeholder="Search product..." value="{{ request('search') }}">
+                <input class="search-input" type="text" name="search" placeholder="Search product..." name="search" value="{{ request('search') }}">
             </div>
         </div>
+    </form>
         <div class="table-product-head">
             <p>Image</p>
             <p>Name</p>
@@ -73,7 +75,7 @@ Toast.fire({
             
             @endforeach
             @else
-            <p>'noproducts'</p>
+            <p>no products</p>
             @endif
         </div>
 
