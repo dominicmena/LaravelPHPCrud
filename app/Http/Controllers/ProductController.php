@@ -50,4 +50,9 @@ class ProductController extends Controller
         $product->save();
         return redirect()->route('products.index')->with('success', 'Product added successfully');
     }
+
+    public function edit($id) {
+        $product = Product::findOrFail($id);
+        return view('products.edit',['product'=>$product]);
+    }
 }

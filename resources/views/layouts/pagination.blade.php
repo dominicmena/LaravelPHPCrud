@@ -23,9 +23,7 @@
     @endforeach
     @endif
     @endforeach
-    <a class="active-page">1</a>
-    <a>2</a>
-    <a>3</a>
+  
 
     @if ($paginator->hasMorePages())
     <a href="{{$paginator->nextPageUrl()}}">&raquo;</a>
