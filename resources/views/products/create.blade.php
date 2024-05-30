@@ -9,7 +9,15 @@
             <h1>Add Product</h1>
             <button>Save</button>
         </div>
-
+        @if ($errors->any)
+        <div>
+            <ul>
+                @foreach ($errors->all() as $error )
+                <li>{{ $error }}</li>
+                @endforeach
+                @endif
+            </ul>
+        </div>
         <div class="card">
            <div>
                 <label>Name</label>
