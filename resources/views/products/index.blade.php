@@ -39,10 +39,10 @@
         <div class="table-product-body">
             @if (count($products) > 0)
             @foreach ($products as $product)
-            <img src="{{ asset('images/' , $product->image)}}"/>
-            <p> Product name</p>
-            <p>Category</p>
-            <p>Inventory</p>
+            <img src="{{ asset('images/' . $product->image)}}"/>
+            <p> {{$product->name}}</p>
+            <p>{{$product->category}}</p>
+            <p>{{$product->inventory}}</p>
             <div>     
                 <button class="btn btn-success" >
                     <i class="fas fa-pencil-alt" ></i> 
@@ -51,6 +51,7 @@
                     <i class="far fa-trash-alt"></i>
                 </button>
             </div>
+            @endforeach
         </div>
         <div class="table-paginate">
             <div class="pagination">
