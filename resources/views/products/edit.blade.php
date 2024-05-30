@@ -34,19 +34,20 @@
                 <label>Category</label>
                 <select  name="category" id="" >
                     @foreach (json_decode('{"Smartphone":"Smartphone", "Smart TV": "Smart TV", "Computer":"Computer"}', true) as $optionKey => $optionValue)
-                    <option value="{{$optionKey}}" >{{$optionValue}}</option>
+                    <option value="{{$optionKey}}"  {{ (isset($product->category) && $product->category == $optionKey) ? 'selected' : ''}} >{{$optionValue}}</option>
                     @endforeach
                 </select>
                 <hr>
                 <label>Inventory</label>
-                <input type="text" name="quantity" >
+                <input type="text" name="quantity" value="{{$product->quantity}}">
                 <hr>
                 <label>Price</label>
-                <input type="text" name="price" >
+                <input type="text" name="price" value="{{$product->price}}">
            </div>
         </div>
         <div class="titlebar">
             <h1></h1>
+            <input type="hidden" name="hidden_id" value="{{$product->id}}">
             <button>Save</button>
         </div>
     </form>
