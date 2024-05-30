@@ -15,16 +15,14 @@ class ProductController extends Controller
     public function create() {
         return view('products.create');
     }
-    public function store(Request $request) {
-
-    }
+  
     public function store(Request $request) {
 
         
         $product = new Product;
 
         $file_name = time() . '.' . request()->image->getClientOriginalExtension();
-        request()->image->move();
+        request()->image->move(public_path('images'), $file_name);
 
         
         $product->name = $request->name;
