@@ -37,7 +37,9 @@
             <p>Actions</p>
         </div>
         <div class="table-product-body">
-            <img src="1.jpg"/>
+            @if (count($products) > 0)
+            @foreach ($products as $product)
+            <img src="{{ asset('images/' , $product->image)}}"/>
             <p> Product name</p>
             <p>Category</p>
             <p>Inventory</p>

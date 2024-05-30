@@ -8,7 +8,7 @@ use App\Models\Product;
 class ProductController extends Controller
 {
     public function index() {
-        $products = "Product list form in ProductController";
+        $products = Product::orderby('created_at')->get();
         return view('products.index', ['products' => $products]);
     }
 
@@ -31,6 +31,7 @@ class ProductController extends Controller
         $product->category = $request->category;
         $product->quantity= $request->quantity;
         $product->price = $request->price;
+
         $product->save();
         return redirect()->route('products.index')->with('success', 'Product added successfully');
     }
