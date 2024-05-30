@@ -51,8 +51,13 @@
                     <i class="far fa-trash-alt"></i>
                 </button>
             </div>
+            
             @endforeach
+            @else
+            <p>'noproducts'</p>
+            @endif
         </div>
+
         <div class="table-paginate">
             <div class="pagination">
                 <a href="#" disabled>&laquo;</a>
