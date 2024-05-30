@@ -80,6 +80,7 @@ Toast.fire({
         </div>
 
         <div class="table-paginate">
+            {{$products->links()}}
             <div class="pagination">
                 <a href="#" disabled>&laquo;</a>
                 <a class="active-page">1</a>
