@@ -65,7 +65,7 @@ Toast.fire({
             <p>{{$product->category}}</p>
             <p>{{$product->quantity}}</p>
             <div style="display:flex">     
-                <a href="{{ route('products.edit', $product->id) }}" class="btn btn-success" style="">
+                <a href="{{ route('products.edit', $product->id) }}" class="btn btn-success" style="padding:10px;">
                     <i class="fas fa-pencil-alt" ></i> 
                 </a>
                 
