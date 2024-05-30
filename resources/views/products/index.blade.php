@@ -7,12 +7,23 @@
         <a href="{{ route('products.create') }}" class="btn-link">Add Product</a>
     </div>
     @if ($message = Session::get('success'))
-    <div>
-
-        <ul>
-            <li>{{$message}}</li>
-        </ul>
-    </div>
+   <script type="text/javascript">
+    const Toast = Swal.mixin({
+  toast: true,
+  position: "top-end",
+  showConfirmButton: false,
+  timer: 3000,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.onmouseenter = Swal.stopTimer;
+    toast.onmouseleave = Swal.resumeTimer;
+  }
+});
+Toast.fire({
+  icon: "success",
+  title: "{{$message }}"
+});
+   </script>
     @endif
     <div class="table">
         <div class="table-filter">
