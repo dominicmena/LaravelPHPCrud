@@ -1,5 +1,5 @@
 [build]
-  command = "composer install && php artisan build"  
+  command = "vite build && composer install && php artisan build"  
   publish = "public"
 
 [build.environment]
